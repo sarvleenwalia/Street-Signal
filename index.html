@@ -24,3 +24,5 @@ const ssShow=show;show=()=>{ssShow();let q=$('#q').value.toLowerCase(),c=$('#cou
 </script>
 
 <script>const mapFix=document.createElement('style');mapFix.textContent='#mw{height:min(72vh,760px)!important;min-height:520px!important}@media(max-width:700px){#mw{height:68vh!important;min-height:480px!important;max-height:700px!important}}';document.head.append(mapFix);if(![...$('#country').options].some(o=>o.value==='India'))$('#country').insertAdjacentHTML('beforeend','<option>India</option>');</script>
+
+<script>document.querySelector('#country').append(new Option('India','India'));</script>
