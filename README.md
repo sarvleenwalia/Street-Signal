@@ -1,22 +1,33 @@
-# GatherMap
+# Street Signal
 
-A privacy-first prototype for viewing publicly announced protests and rallies on Google Maps.
+**Public gatherings, on your map.**
 
-## Prototype status
+Street Signal is a public events map for finding organizer-announced protests, rallies, marches, and vigils. It is designed to make public event details easier to browse while respecting participants’ privacy.
 
-- Enter a restricted Google Maps JavaScript API key at runtime to load the map. This prototype does not store the key.
-- Add an event by clicking its public venue and entering its title, date/time, and organizer/source URL.
-- Listings are marked unverified and saved in this browser only. There is no backend, shared feed, account system, GPS access, or participant tracking.
-- This repository contains no real event listings. Verify event details with the organizer before relying on them.
+**Live site:** https://sarvleenwalia.github.io/gathermap/
+
+## What it does
+
+- Shows a map and event list with public venues, dates, times, and links to source pages.
+- Lets visitors search events and filter by country.
+- Includes a one-time Google Maps JavaScript API key field. The app does not save the key.
+- Keeps community event additions in the visitor’s browser; they are not submitted to a shared database.
+- Does not request GPS access, create accounts, or track participants.
+
+## Event information
+
+Listings are a snapshot, not a complete or real-time feed. Event details can change, and a source link does not guarantee that an event is still happening. Check the linked organizer or source before traveling.
+
+Community-submitted listings are unverified. Events without a confirmed public meeting point should not be assigned a precise map pin. Never add a participant’s private or live location.
 
 ## Google Maps setup
 
-Enable the Maps JavaScript API for a Google Cloud project, create a key restricted to this API and to the site referrer, then enter it in the app. Google Maps Platform may require billing. Do not commit an unrestricted key.
+To display the map, create a Google Maps Platform API key and restrict it to the **Maps JavaScript API** and the Street Signal site referrer. Enter it in the map’s setup panel. The key is used for that browser session and is not saved by the app. Google Maps Platform may require billing. Never commit an unrestricted key or publish a secret key in this repository.
 
-Security guidance: https://developers.google.com/maps/api-security-best-practices
+## Updating the event snapshot
 
-## Safety and privacy
+The curated event snapshot is in `index.html`. Before adding an event, use a current public source, preserve the organizer’s venue and timing, and link directly to the source. Mark unknown details as TBA; do not infer a meeting point or coordinates.
 
-Only add events publicly announced by organizers or reputable public sources. Pin public venues, never participants. A public launch needs a reviewed event feed, moderation, correction/expiry tools, abuse reporting, and a privacy policy.
+## Project status
 
-Google Maps Platform terms and attribution: https://developers.google.com/maps/documentation/javascript/policies
+Street Signal is a small static-site project hosted with GitHub Pages. Community additions are local to each browser and are not shared between visitors.
